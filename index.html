@@ -1,0 +1,1967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="rashelphotoRound.png"
+        type="image/x-icon" />
+    <title>Rashel's Portfolio</title>
+	
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	
+	<style>
+        :root {
+            --primary-color: #0B2545;
+            --secondary-color: #13315C;
+            --accent-color: #134074;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section 
+        .hero {
+            padding: 8rem 1rem 5rem;
+            background-color: var(--light-color);
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 2rem;
+        }
+*/
+        /* About Section */
+        .about {
+            padding: 5rem 1rem;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 3rem;
+        }
+
+        .about-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+/*
+        .about-image {
+            width: 100%;
+            aspect-ratio: 1;
+            border-radius: 50%;
+          //  background-color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 5rem;
+        }
+*/
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+
+        .about-text p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .skill-tag {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 5rem 1rem;
+            background-color: var(--light-color);
+        }
+
+        .services-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            padding: 0 1rem;
+        }
+
+        .service-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .service-icon i {
+            font-size: 2rem;
+            color: white;
+        }
+
+        .service-card h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .service-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .service-features li {
+            padding: 0.5rem 0;
+            color: var(--secondary-color);
+            border-bottom: 1px solid #eee;
+        }
+
+        .service-features li:last-child {
+            border-bottom: none;
+        }
+
+        @media (max-width: 1200px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .about-image {
+                max-width: 300px;
+                margin: 0 auto;
+            }
+
+            .skills {
+                justify-content: center;
+            }
+
+           
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <nav>
+        <div class="logo">Rashel</div>
+        <div class="nav-links">
+            <a href="#about">About Me</a>
+            <a href="#services">My Services</a>
+            <a href="#portfolio">My Portfolio</a>
+			<a href="#blog">Latest Blog</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+            <a href="#testimonials">What Clients Say</a>
+            <a href="#contact">Get in Touch</a>
+        </div>
+    </nav>
+</header>
+
+    <!-- Hero Section 
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Shopify Expert & Developer</h1>
+            <p>Crafting profitable e-commerce experiences that drive results</p>
+        </div>
+    </section>
+-->
+<!--new -->
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="slider">
+        <div class="slide">
+            <img src="Slide1.jpg" alt="Slide 1">
+            <div class="hero-content">
+                <h1>Shopify Dropshipping Expert</h1>
+                <p>Crafting profitable e-commerce experiences that drive results</p>
+                <p class="hero-description">
+                    With over 3 years of experience in Shopify development and dropshipping,
+                    I specialize in creating high-converting, customer-focused online stores.
+                    Let's work together to turn your e-commerce vision into reality.
+                </p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="Slide2.jpg" alt="Slide 2">
+            <div class="hero-content">
+                <h1>Complete Solutions</h1>
+                <p>Transforming ideas into successful online stores</p>
+                <p class="hero-description">
+                    From store setup to optimization, I deliver comprehensive Shopify solutions that help businesses thrive
+                     in the digital marketplace. My expertise covers everything from theme customization to product research.
+                </p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="Slide3.jpg" alt="Slide 3">
+            <div class="hero-content">
+                <h1>E-commerce Excellence</h1>
+                <p>Leveraging proven Shopify strategies</p>
+                <p class="hero-description">
+                    Expert in all aspects of Shopify including store development, theme customization, product research,
+                    and optimization. I use data-driven approaches to create stores that convert visitors into customers.
+                </p>
+            </div>
+        </div>
+        <button class="slider-btn prev-btn" aria-label="Previous slide">❮</button>
+        <button class="slider-btn next-btn" aria-label="Next slide">❯</button>
+    </div>
+</section>
+ <style>
+        .round-image {
+            width: 300px; /* Adjust size as needed */
+            height: 300px; /* Should be equal to width for a perfect circle */
+            border-radius: 50%; /* This makes the image round */
+            object-fit: cover; /* This ensures the image fills the circular space properly */
+            display: block;
+        }
+    </style>
+<style>
+/* Hero Section Styles */
+.hero {
+    padding: 0;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 90%;
+    max-width: 800px;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 1rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 3;
+    transition: background 0.3s ease;
+}
+
+.slider-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.prev-btn {
+    left: 2rem;
+}
+
+.next-btn {
+    right: 2rem;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .slider-btn {
+        padding: 0.8rem 1.2rem;
+        font-size: 1.2rem;
+    }
+}
+</style>
+
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-image">
+               <!-- <i class="fas fa-user"></i> -->
+				<img src="rashelphoto.jpg" alt="my photo" class="round-image">
+				
+            </div>
+            <div class="about-text">
+                <h3>Hi, I'm Rashel</h3>
+                <p>I'm a dedicated Shopify expert with over 3 years of experience 
+				in creating successful online stores. I specialize in high-converting 
+				store development, theme customization, branding, and product solutions.</p>
+                <p>My approach combines strategic design with technical expertise to 
+				deliver Shopify solutions that not only look professional but also 
+				drive meaningful results for my clients.</p>
+                <div class="skills">
+                    <span class="skill-tag">Design Shopify Stores</span>
+                    <span class="skill-tag">Premium Theme</span>
+                    <span class="skill-tag">Branded Logo Design</span>
+                    <span class="skill-tag">Winning Product Research</span>
+                    <span class="skill-tag">Product Descriptions</span>
+                    <span class="skill-tag">Store Management</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2 class="section-title">My Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>Store Development</h3>
+                <p>Complete Shopify store solutions</p>
+                <ul class="service-features">
+                    <li>Custom Setup</li>
+                    <li>Theme Customization</li>
+                    <li>Brand Design</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                  <!--  <i class="fas fa-mobile-alt"></i>  <i class="fas fa-search"></i>-->
+					
+					 <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Product Research</h3>
+                <p>Finding winning products that sell</p>
+                <ul class="service-features">
+                    <li>Market Analysis</li>
+                    <li>Competitor Research</li>
+                    <li>Trending Products</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <h3>Product Management</h3>
+                <p>Professional product listing services</p>
+                <ul class="service-features">
+                    <li>Bulk Upload</li>
+                    <li>Image Optimization</li>
+                    <li>Product Setup</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3>Product Description</h3>
+                <p>High-Converting content that drives sales</p>
+                <ul class="service-features">
+                    <li>SEO Optimized</li>
+                    <li>Engaging Content</li>
+                    <li>Brand Voice</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+	
+	<!-- portfolio Section -->
+<section class="portfolio" id="portfolio">
+    <h2 class="section-title">My portfolio</h2>
+    <div class="portfolio-grid">
+        <div class="portfolio-item">
+            <div class="portfolio-image">
+           <a href="Protfolio1.html" style="text-decoration: none"> <img src="Protfolio1.jpg" alt="project 1">
+             <!--   <div class="portfolio-overlay">
+                   <div class="portfolio-links">
+					<a href="Protfolio1.html" class="portfolio-link"><i class="fas fa-link"></i></a>   
+                    </div>
+					
+                </div>
+				-->
+            </div>
+            <div class="portfolio-details">
+            <h3>Starfashique - Fashion Store Design</h3> 
+                <div class="portfolio-tags">
+                    <span>Shopify</span>
+                    <span>Theme Customization</span>
+                    <span>Branding</span>
+                </div>
+                <p class="portfolio-description">
+                    A high-performance fashion store built on Shopify with premium theme customization,
+					professional branding, and complete product management. Includes mobile optimization, 
+					payment setup, and strategic store design.
+                </p>
+                <ul class="portfolio-features">
+                    <li>Responsive premium theme setup</li>
+                    <li>Custom logo and brand design</li>
+                    <li>Winning product integration</li>
+                    <li>Payment gateway optimization</li>
+                </ul> </a>
+            </div>
+        </div>
+
+        <div class="portfolio-item">
+            <div class="portfolio-image">
+                <a href="Protfolio2.html" style="text-decoration: none"> <img src="Protfolio2.jpg" alt="Project 2"> 
+             <!--   <div class="portfolio-overlay">
+                <!--<div class="portfolio-overlay">
+                    <div class="portfolio-links">
+                    <a href="Protfolio2.html" class="portfolio-link"><i class="fas fa-link"></i></a>     
+                    </div>
+                </div>-->
+            </div>
+            <div class="portfolio-details">
+                <h3>Shopify SEO Product Descriptions</h3> 
+                <div class="portfolio-tags">
+                    <span>Content Writing</span>
+                    <span>SEO Descriptions</span>
+                    <span>Product Research</span>
+                </div>
+                <p class="portfolio-description">
+                    Crafted 700+ conversion-focused product descriptions for a Shopify dropshipping store. 
+					Each description was strategically written to enhance SEO, highlight product 
+					benefits, and drive sales through persuasive content.
+                </p>
+                <ul class="portfolio-features">
+                    <li>SEO-optimized content structure</li>
+                    <li>Research-backed product features</li>
+                    <li>Benefit-focused descriptions</li>
+                    <li>Consistent brand voice</li>
+                </ul> </a>
+            </div>
+        </div>
+
+        <div class="portfolio-item">
+            <div class="portfolio-image">
+                <a href="Protfolio3.html" style="text-decoration: none"> <img src="Protfolio3.jpg" alt="Project 3">
+                <!--<div class="portfolio-overlay">
+                    <div class="portfolio-links">
+                    <a href="Protfolio3.html" class="portfolio-link"><i class="fas fa-link"></i></a>     
+                    </div>
+                </div>-->
+            </div>
+            <div class="portfolio-details">
+                <h3>The Leafy Boutique - Plant Store Setup</h3>
+                <div class="portfolio-tags">
+                    <span>Shopify</span>
+                    <span>Brand Development</span>
+                    <span>Product Setup</span>
+                </div>
+                <p class="portfolio-description">
+                    Created a fully branded Shopify plant store with a premium theme tailored for a 
+					seamless shopping experience. Focused on sustainability, this design 
+					connects customers with nature's beauty through ethically grown plants.
+                </p>
+                <ul class="portfolio-features">
+                    <li>Custom theme implementation</li>
+                    <li>Professional branding & logo</li>
+                    <li>Strategic product setup</li>
+                    <li>Performance optimization</li>
+                </ul> </a>
+            </div>
+        </div>
+
+        <div class="portfolio-item">
+            <div class="portfolio-image">
+                <a href="Protfolio4.html" style="text-decoration: none"> <img src="Protfolio4.jpg" alt="Project 4">
+                <!--<div class="portfolio-overlay">
+                    <div class="portfolio-links">
+                     <a href="Protfolio4.html" class="portfolio-link"><i class="fas fa-link"></i></a>    
+                    </div>
+                </div>-->
+            </div>
+            <div class="portfolio-details">
+               <h3>Nature's Delight Beauty Shopify Store Design</h3>
+                <div class="portfolio-tags">
+                    <span>Shopify </span>
+                    <span>Theme Design</span>
+                    <span>Store Optimization</span>
+                </div>
+                <p class="portfolio-description">
+                    Created a professional Shopify beauty store with custom theme design, 
+					strategic layout, and complete e-commerce functionality. 
+					Delivered a high-converting Shopify store focused on user experience 
+					and brand aesthetics.
+                </p>
+                <ul class="portfolio-features">
+                    <li>Premium theme customization</li>
+                    <li>Mobile-first design</li>
+                    <li>Speed optimization</li>
+                    <li>App integration</li>
+                </ul> </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* portfolio Section Styles */
+.portfolio {
+    padding: 5rem 1rem;
+    background-color: white;
+}
+
+.portfolio-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.portfolio-item {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.portfolio-image {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    background-color: var(--primary-color);
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-item:hover .portfolio-image img {
+    transform: scale(1.1);
+}
+
+.portfolio-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.portfolio-link {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-link:hover {
+    transform: translateY(-3px);
+}
+
+.portfolio-details {
+    padding: 1.5rem;
+}
+
+.portfolio-details h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.portfolio-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.portfolio-tags span {
+    background-color: #f1f1f1;
+    color: var(--primary-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+.portfolio-description {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.portfolio-features {
+    list-style: none;
+    padding: 0;
+}
+
+.portfolio-features li {
+    color: var(--secondary-color);
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+}
+
+.portfolio-features li:last-child {
+    border-bottom: none;
+}
+
+.portfolio-features li::before {
+    content: "•";
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-grid {
+        max-width: 400px;
+    }
+}
+</style>
+
+
+<!-- Blog Section -->
+<section class="blog" id="blog">
+    <h2 class="section-title">Latest Blog</h2>
+    <div class="blog-grid">
+        <article class="blog-card">
+            <div class="blog-image">
+                <a href="Blog1Drop.html" style="text-decoration: none"> <img src="blog1.webp" alt="Shopify Dropshipping Guide"> 
+                <!-- <div class="blog-category">Dropshipping</div>-->
+            </div>
+            <div class="blog-content">
+                <div class="blog-meta">
+                    <span class="blog-date">Oct 15, 2024</span>
+                    <span class="blog-read-time">165 min read</span>
+                </div>
+				
+				<h3 class="blog-title">Shopify Dropshipping: A Comprehensive Guide</h3>
+                <p class="blog-excerpt">
+                    In the fast-paced world of e-commerce, dropshipping has emerged as a 
+					popular business model, and Shopify is at the forefront of this revolution.....
+                </p> </a>
+                <!--<div class="blog-tags">
+                    <span>#Shopify</span>
+                    <span>#Dropshipping</span>
+                    <span>#Shopify store</span>
+                </div>
+                <a href="Blog1Drop.html" class="blog-read-more">Read More</a>
+            </div> -->
+        </article>
+
+        <article class="blog-card">
+            <div class="blog-image">
+                <a href="Blog2CopyWriting.html" style="text-decoration: none"> <img src="blog2.png" alt="Product Description">
+                <!--<div class="blog-category">Copywriting</div>-->
+            </div>
+            <div class="blog-content">
+                <div class="blog-meta">
+                    <span class="blog-date">Oct 8, 2024</span>
+                    <span class="blog-read-time">134 min read</span>
+                </div>
+                
+				<h3 class="blog-title">High-Converting Product Description Copywriting</h3> 
+                <p class="blog-excerpt">
+                    Product descriptions serve as the digital salesperson of your online store. 
+					They bridge the gap between your product and potential customers.....
+                </p> </a>
+                <!--<div class="blog-tags">
+                    <span>#Copywriting</span>
+                    <span>#Product Description</span>
+                    <span>#Description</span>
+                </div> 
+                <a href="Blog2CopyWriting.html" class="blog-read-more">Read More</a>
+            </div> -->
+        </article>
+
+        <article class="blog-card">
+            <div class="blog-image">
+               <a href="Blog3WinningProduct.html"style="text-decoration: none"> <img src="blog3.png" alt="Winning Product Research">
+                <!--<div class="blog-category">Winning Product</div>-->
+            </div>
+            <div class="blog-content">
+                <div class="blog-meta">
+                    <span class="blog-date">Oct 1, 2024</span>
+                    <span class="blog-read-time">176 min read</span>
+                </div>
+                <h3 class="blog-title">Dropshipping Winning Product Research</h3> 
+                <p class="blog-excerpt">
+                    In the ever-evolving landscape of e-commerce, staying ahead of the 
+					competition requires strategic planning and insightful research. The key to success.....
+                </p> </a>
+                <!--<div class="blog-tags">
+                    <span>#Winning Product</span>
+                    <span>#Product Research</span>
+                    <span>#Dropshipping Product</span>
+                </div> 
+                <a href="Blog3WinningProduct.html" class="blog-read-more">Read More</a> -->
+            </div>
+        </article>
+    </div>
+</section>
+
+<style>
+/* Blog Section Styles */
+.blog {
+    padding: 5rem 1rem;
+    background-color: var(--light-color);
+}
+
+.blog-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.blog-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-image {
+    position: relative;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+}
+
+.blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover .blog-image img {
+    transform: scale(1.1);
+}
+
+.blog-category {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.blog-content {
+    padding: 1.5rem;
+}
+
+.blog-meta {
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.blog-title {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.blog-excerpt {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.blog-tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.blog-tags span {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+.blog-read-more {
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+}
+
+.blog-read-more::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.blog-read-more:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+@media (max-width: 1024px) {
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+}
+</style>
+
+<!-- Experience Section -->
+<section class="experience" id="experience">
+    <h2 class="section-title">Experience</h2>
+    <div class="experience-container">
+        <div class="experience-card">
+            <div class="experience-icon">
+                <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="experience-content">
+                <div class="experience-date">2023 - Present</div>
+                <h3>Product Description Copywriter</h3>
+                <h4>Hichem Copywriting Agency, Tunisia</h4>
+                <p>Crafted 1000+ SEO-optimized, high-converting product descriptions for e-commerce platforms, 
+				using persuasive, brand-tailored language to boost sales and engagement. Specialized in 
+				research-driven, emotionally resonant copy that enhances customer experience.</p>
+            </div>
+        </div>
+
+        <div class="experience-card">
+            <div class="experience-icon">
+                <i class="fas fa-laptop-code"></i>
+            </div>
+            <div class="experience-content">
+                <div class="experience-date">2021 - Present</div>
+                <h3>Shopify Virtual Assistant</h3>
+                <h4>Freelancing Marketplace</h4>
+                <p>Provided end-to-end Shopify support as a Virtual Assistant, handling product uploads, 
+				SEO optimization, store customization, and customer service. Ensured smooth store operations 
+				and improved conversions across various freelance projects.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Experience Section Styles */
+.experience {
+    padding: 5rem 1rem;
+    background-color: white;
+}
+
+.experience-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.experience-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-10px);
+}
+
+.experience-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1.5rem;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.experience-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.experience-date {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.experience-content h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.experience-content h4 {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.experience-content p {
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .experience-container {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+}
+</style>
+
+<!-- Education Section -->
+<section class="education" id="education">
+    <h2 class="section-title">Education</h2>
+    <div class="education-container">
+        <div class="education-card">
+            <div class="education-icon">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="education-content">
+                <div class="education-date">2015 - 2016</div>
+                <h3>Master of Business Administration in Human Resource Management</h3>
+                <h4>University of Chattogram</h4>
+                <p>Specialized in strategic HRM with a focus on talent acquisition, organizational behavior, and employee development.</p>
+            </div>
+        </div>
+
+        <div class="education-card">
+            <div class="education-icon">
+                <i class="fas fa-university"></i>
+            </div>
+            <div class="education-content">
+                <div class="education-date">2011 - 2014</div>
+                <h3>Bachelor of Business Administration in Human Resource Management</h3>
+                <h4>Bangladesh Open University</h4>
+                <p>Specialized in HRM with a focus on recruitment strategies, performance management, and employee relations.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Education Section Styles */
+.education {
+    padding: 5rem 1rem;
+    background-color: var(--light-color);
+}
+
+.education-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.education-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-10px);
+}
+
+.education-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1.5rem;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.education-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.education-date {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.education-content h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.education-content h4 {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.education-content p {
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .education-container {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+}
+</style>
+
+<!-- Testimonials Section -->
+<section class="testimonials" id="testimonials">
+    <h2 class="section-title">What Clients Say</h2>
+    <div class="testimonials-container">
+        <button class="testimonial-nav prev" aria-label="Previous testimonial">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        
+        <div class="testimonials-wrapper">
+            <div class="testimonials-track">
+                <div class="testimonial-card">
+                    <div class="testimonial-image">
+                        <img src="client1.jpg" alt="Sarah Johnson">
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Working with Rashel was an absolute game-changer for our business. Their expertise
+							in Shopify helped us streamline our online store, resulting in a 30% increase in sales 
+							within the first month. His attention to detail and dedication to excellence are unmatched. 
+							Highly recommended!"
+                        </p>
+                        <div class="testimonial-author">
+                            <h4>Sarah Johnson</h4>
+                            <p>CEO, TechStart Inc.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-image">
+                        <img src="client2.jpg" alt="Mark Williams">
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Rashel transformed our Shopify store beyond our expectations. He not only improved the user
+							experience but also optimized our site for better performance. The increase in customer engagement 
+							and satisfaction has been phenomenal. We couldn't be happier with the results!"
+                        </p>
+                        <div class="testimonial-author">
+                            <h4>Mark Williams</h4>
+                            <p>Founder, EcoStore</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-image">
+                        <img src="client3.jpg" alt="Emily Chen">
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "From start to finish, Rashel provided exceptional service. His deep understanding of 
+							Shopify allowed us to customize our store effectively, and his innovative solutions 
+							solved our most complex challenges. His professionalism and technical skills are top-notch. 
+							A true expert!"
+                        </p>
+                        <div class="testimonial-author">
+                            <h4>Emily Chen</h4>
+                            <p>Founder of Eco Essentials</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="testimonial-nav next" aria-label="Next testimonial">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <div class="testimonial-dots"></div>
+    </div>
+</section>
+
+<style>
+/* Testimonials Section Styles */
+.testimonials {
+    padding: 5rem 1rem;
+    background-color: white;
+}
+
+.testimonials-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding: 2rem 0;
+}
+
+.testimonials-wrapper {
+    overflow: hidden;
+    position: relative;
+    padding: 0 4rem;
+}
+
+.testimonials-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.testimonial-card {
+    min-width: 100%;
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.testimonial-image {
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid var(--light-color);
+}
+
+.testimonial-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial-content {
+    flex-grow: 1;
+}
+
+.testimonial-rating {
+    color: #ffd700;
+    margin-bottom: 1rem;
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.testimonial-author h4 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+}
+
+.testimonial-author p {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+.testimonial-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.testimonial-nav.prev {
+    left: 0;
+}
+
+.testimonial-nav.next {
+    right: 0;
+}
+
+.testimonial-nav:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.testimonial-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: var(--primary-color);
+}
+
+@media (max-width: 968px) {
+    .testimonial-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .testimonial-image {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials-wrapper {
+        padding: 0 3rem;
+    }
+
+    .testimonial-text {
+        font-size: 1rem;
+    }
+}
+</style>
+<script>
+//slider
+document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    let currentSlide = 0;
+
+    // Initialize first slide
+    slides[currentSlide].classList.add('active');
+
+    function showSlide(n) {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (n + slides.length) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() {
+        showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+        showSlide(currentSlide - 1);
+    }
+
+    // Event listeners
+    prevBtn.addEventListener('click', prevSlide);
+    nextBtn.addEventListener('click', nextSlide);
+
+    // Auto slide
+    setInterval(nextSlide, 5000);
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const track = document.querySelector('.testimonials-track');
+    const slides = document.querySelectorAll('.testimonial-card');
+    const prevButton = document.querySelector('.testimonial-nav.prev');
+    const nextButton = document.querySelector('.testimonial-nav.next');
+    const dotsContainer = document.querySelector('.testimonial-dots');
+    
+    let currentIndex = 0;
+    
+    // Create dots
+    slides.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        if (index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(index));
+        dotsContainer.appendChild(dot);
+    });
+    
+    const dots = document.querySelectorAll('.dot');
+    
+    function updateDots() {
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+    }
+    
+    function goToSlide(index) {
+        currentIndex = index;
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        updateDots();
+    }
+    
+    prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        goToSlide(currentIndex);
+    });
+    
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        goToSlide(currentIndex);
+    });
+    
+    // Auto-advance slides
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        goToSlide(currentIndex);
+    }, 5000);
+});
+</script>
+<!-- Contact Section -->
+<section class="contact" id="contact">
+    <div class="contact-container">
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="contact-description">
+            Ready to start a project? You can reach me through any of these platforms:
+        </p>
+        
+        <div class="contact-platforms">
+            <!-- Professional Platforms -->
+            <div class="platform-group">
+                <h3>Hire Me On</h3>
+                <div class="platform-links">
+                    <a href="https://www.fiverr.com/s/38aDGLk" target="_blank" class="platform-link fiverr">
+				   <img width="40" height="40" src="icons8-fiverr-50.png" style="margin-right: 10px;" alt="fiverr--v2"/>
+                        <div class="platform-info">
+                            <h4 style="margin: 0;">Fiverr</h4>
+                            <p style="margin: 0;">Check my gigs and reviews</p>
+                        </div>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                    
+                    <a href="https://www.upwork.com/freelancers/~0107e920db76ee7d76?mp_source=share" target="_blank" class="platform-link upwork">
+                       <!-- <i class="fab fa-ups"></i>-->
+						<i class="fa-brands fa-upwork"></i>
+                        <div class="platform-info">
+                            <h4>Upwork</h4>
+                            <p>View my profile and portfolio</p>
+                        </div>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Direct Contact -->
+            <div class="platform-group">
+                <h3>Direct Contact</h3>
+                <div class="platform-links">
+                    <a href="https://wa.me/+8801678054625" target="_blank" class="platform-link whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        <div class="platform-info">
+                            <h4>WhatsApp</h4>
+                            <p>Chat with me directly</p>
+                        </div>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+
+                    <a href="mailto:rasel.Shopify@gmail.com" target="_blank" class="platform-link email">
+                        <i class="fas fa-envelope"></i>
+                        <div class="platform-info">
+                            <h4>Email</h4>
+                            <p>rasel.Shopify@gmail.com</p>
+                        </div>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+					  <a href="https://www.linkedin.com/in/rasel27/" target="_blank" class="platform-link emaili">
+                        <i class="fab fa-linkedin"></i>
+                        <div class="platform-info">
+                             <h4>Linkedin</h4>
+                            <p>Connect with me</p>
+                        </div>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                       
+					
+            </div>
+			</div>
+			<!--new added code-->
+			 <div class="platform-group">
+                <h3>Location</h3>
+                <div class="platform-links">
+                    <a href="https://maps.app.goo.gl/SYkQvmJgKqystsgy6" target="_blank" class="platform-link Location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="platform-info">
+                            <h4>Dhaka, Bangladesh</h4>
+                            <p>Post Code: 1206</p>
+                        </div>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+		  </div>
+			<!--new added code end-->
+
+            <!-- Social Links -->
+			<!--
+            <div class="platform-group">
+                <h3>Social Media</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+			-->
+      <!--  </div> -->
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <h3>Rashel</h3>
+            <p>Shopify Dropshipping Expert</p>
+        </div>
+        <div class="footer-links">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">My Portfolio</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#services">• Store Development</a></li>
+                    <li><a href="#services">• Product Research</a></li>
+                    <li><a href="#services">• Product Management</a></li>
+                    <li><a href="#services">• Product Description</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Rashel. All rights reserved.</p>
+        <div class="footer-social">
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</footer>
+
+<style>
+/* Contact Section Styles */
+.contact {
+    padding: 5rem 1rem;
+    background-color: var(--light-color);
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.contact-description {
+    color: var(--secondary-color);
+    margin: 1.5rem auto;
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+.contact-platforms {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.platform-group {
+    width: 100%;
+}
+
+.platform-group h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.platform-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.platform-link {
+    display: flex;
+    align-items: center;
+    padding: 1.2rem;
+    background: white;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--secondary-color);
+    width: 300px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+
+.platform-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.platform-link i:first-child {
+    font-size: 1.8rem;
+    margin-right: 1rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.platform-info {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.platform-info h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.2rem;
+}
+
+.platform-info p {
+    font-size: 0.9rem;
+}
+
+.platform-link .fa-external-link-alt {
+    font-size: 1rem;
+    opacity: 0.5;
+}
+
+/* Platform-specific colors */
+.whatsapp i:first-child {
+    color: #25D366;
+    background: rgba(37, 211, 102, 0.1);
+}
+
+.fiverr i:first-child {
+    color: #1DBF73;
+    background: rgba(29, 191, 115, 0.1);
+}
+
+.upwork i:first-child {
+    color: #6FDA44;
+    background: rgba(111, 218, 68, 0.1);
+}
+
+.email i:first-child {
+    color: #EA4335;
+    background: rgba(234, 67, 53, 0.1);
+}
+
+.emaili i:first-child {
+    color: blue;
+    background: rgba(0, 0, 255,0.10);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-links a {
+    width: 45px;
+    height: 45px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.social-links a:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Footer Styles */
+.footer {
+    background: var(--primary-dark);
+    color: var(--primary-color);
+    padding: 4rem 1rem 1rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-logo h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-logo p {
+    color: black;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.footer-section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-section ul li a {
+    color: var(--dark-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom p {
+    color: rgba(255,255,255,0.7);
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-social a {
+    color: rgba(255,255,255,0.7);
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: white;
+}
+
+@media (max-width: 968px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .platform-link {
+        width: 100%;
+    }
+
+    .footer-links {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}
+</style>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="rashelphotoRound.png"
+        type="image/x-icon" />
+	<title>Beauty Shopify Store Design</title>
+</head>
+<body>
+    <!-- Header with Home Button -->
+    <header class="header">
+        <a href="index.html#portfolio" class="home-button">Home</a>
+    </header>
+
+    <!-- Custom Work Section -->
+    <section class="work" id="work">
+        <h2 class="section-title">Nature's Delight Beauty Shopify Store Design</h2>
+        <p class="section-description">
+            Designed Nature's Delight Beauty for Samuel Tan, a professional Shopify 
+			store with a custom theme and captivating design. Focused on creating a 
+			user-friendly layout, optimized navigation, and seamless e-commerce functionality.
+			Integrated essential apps, secure payment gateways, and mobile-responsive features
+			to enhance usability. Uploaded high-quality product images with engaging descriptions 
+			to showcase the brand's unique beauty offerings. Delivered a visually stunning, 
+			high-converting store tailored to reflect the brand’s elegance and drive online sales effectively.
+        </p>
+        <div class="work-grid">
+            <div class="work-item">
+                <div class="work-details">
+                    <h3>Home Page Design</h3>
+                </div>
+                <div class="work-image">
+                    <img src="project4.jpg" alt="Project 1" style="aspect-ratio: 16/9;">
+                    <div class="work-overlay">
+                        <div class="work-links"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="work-item">
+                <div class="work-details">
+                    <h3>Home Page Full View</h3>
+                </div>
+                <div class="work-image">
+                    <img src="Project4WebsiteDestopView.png" alt="Project 2" style="width: 100%; height: auto;">
+                    <div class="work-overlay">
+                        <div class="work-links"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="work-item">
+                <div class="work-details">
+                    <h3>Product Page View</h3>
+                </div>
+                <div class="work-image">
+                    <img src="Project4DestopProductview.jpg" alt="Project 3" style="width: 100%; height: auto;">
+                    <div class="work-overlay">
+                        <div class="work-links"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="work-item-two-column">
+                <div class="work-item">
+                    <div class="work-details">
+                        <h3>Home Page Mobile View</h3>
+                    </div>
+                    <div class="work-image">
+                        <img src="Project4WebsiteMobileView.png" alt="Project 4" style="width: 100%; height: auto;">
+                        <div class="work-overlay">
+                            <div class="work-links"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-item">
+                    <div class="work-details">
+                        <h3>Product Page Mobile View</h3>
+                    </div>
+                    <div class="work-image">
+                        <img src="Project4MobileProductview.png" alt="Project 5" style="width: 100%; height: auto;">
+                        <div class="work-overlay">
+                            <div class="work-links"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        :root {
+            --primary-color: #333;
+            --secondary-color: #666;
+        }
+
+        /* Header Styles */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem 2rem;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .home-button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid var(--primary-color);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .home-button:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Work Section Styles */
+        .work {
+            margin-top: 70px; /* Added to account for fixed header */
+            padding: 1rem 2rem;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #0b2545;
+        }
+
+        .section-description {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+        }
+
+        .work-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 5rem;
+            padding: 0 1rem;
+        }
+
+        .work-item,
+        .work-item-two-column {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .work-image {
+            position: relative;
+            overflow: hidden;
+            background-color: var(--primary-color);
+        }
+
+        .work-image img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .work-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .work-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .work-link {
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .work-link:hover {
+            transform: translateY(-3px);
+        }
+
+        .work-details {
+            padding: 1.5rem;
+        }
+
+        .work-details h3 {
+            color: #0b2545;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .work-item-two-column {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5rem;
+        }
+
+        @media (max-width: 768px) {
+            .work-grid {
+                max-width: 400px;
+            }
+
+            .work-item-two-column {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html>
